@@ -1,0 +1,349 @@
+:root {
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-2_5: 2.5rem;
+   --space-3: 3rem;
+   --space-3_5: 3.5rem;
+   --space-4: 4rem;
+
+   /*-------form-------*/
+   --icon-size: 12rem;
+   --text-color-lighter: #ccc;
+   --text-color-white: #fff;
+   --color-app-background: #222;
+   --border-radius: 1rem;
+
+}
+* {
+   margin: 0;
+   padding: 0;
+}
+html, body {
+   background: #111;
+   font-family: sans-serif;
+   color: #fff;
+}
+.app {
+   max-width: 1200px;
+   margin: auto;
+}
+
+/*-----text/utiliy-------*/
+.centerText {
+   text-align: center;
+}
+.fontLarger {
+   font-size: 1.25rem
+}
+.m-t-1 {margin-top: 1rem}
+.m-t-2 {margin-top: 2rem}
+.m-t-3 {margin-top: 3rem}
+.m-t-4 {margin-top: 4rem}
+.m-t-5 {margin-top: 5rem}
+/* -----------------banner----------------------- */
+.bgImage {
+   width: 100%;
+   height: 20rem;
+   background-image: url("./images/banner_2.jpeg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   position: relative;
+   filter: blur(0px);
+   margin: auto;
+}
+.banner {
+   display: flex;
+   width: 100%;
+   position: absolute;
+   top: 5rem;
+   left: 50%;
+   transform: translateY(-50%);
+   transform: translateX(-20%);
+   margin: auto;
+}
+.banner .text {
+   color: #fff;
+   padding: 0 var(--space-1);
+   font-size: 4rem;
+   border: 10px solid #fff;
+   background: rgba(0, 0, 0, 0.5);
+   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+   border-radius: 1rem;
+}
+.banner .text h1 {
+   font-weight: 500;
+}
+.navBar {
+   width: 100%;
+   background: #000;
+}
+.navBar ul{
+   padding: var(--space-0_5);
+   text-align: right;
+   line-height: 1rem;
+}
+.navBar ul a {
+   padding: var(--space-1);
+   text-decoration: none;
+   cursor: pointer;
+   color: #fff;
+}
+.navBar ul a:hover {
+   color: red;
+}
+/* -------------------productsPage------------------- */
+
+.formContent {
+   border: 2px solid #fff;
+   border-radius: 0.5rem;
+   width: 35rem;
+   margin: 2rem auto;
+}
+.formContent .stickers {
+   margin-top: 2rem;
+   display: flex;
+   justify-content: center;
+}
+input {
+   width: 50%;
+   padding: 0.5rem;
+   border-radius: 0.25rem;
+}
+#stickerButton {
+   border: none;
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 0.25rem;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+   margin-bottom: 2rem;
+}
+#stickerButton:hover {
+   background-color: #3e8e41;
+}
+
+
+/* -------------------accordian------------------- */
+h2 {
+   padding: 0;
+   margin: 0;
+   margin-bottom: 0.25rem;
+   text-align: center;
+   padding-bottom: var(--space-0_75)
+}
+
+p {
+   color: var(--text-color-lighter);
+   line-height: 2rem;
+}
+.card {
+   padding: var(--space-1);
+   border: 2px solid #999;
+   border-radius: 0.25rem;
+}
+
+.title {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: var(--space-1) 0;
+}
+
+.accordian .title .icon {
+   width: var(--icon-size);
+   height: var(--icon-size);
+}
+.accordian {
+   cursor: pointer;
+   user-select: none;
+}
+.accordian .title .icon img {
+   width: 100%;
+   transition: all 0.25s;
+}
+.accordian .content {
+   display: none;
+   padding: var(--space-1) 0;
+}
+.accordian.active .content {
+   display: block;
+}
+.accordian.active .title .icon img {
+   transform: rotate(180deg);
+}
+
+hr {
+   padding: 0;
+   margin: 0;
+}
+
+/*-------------------------form-------------------------*/
+.center{
+   text-align: center;
+}
+a{
+   color: #c64343;
+}
+a:hover{
+   filter: brightness(150%);
+}
+.form {
+   position: relative;
+   left: 30%;
+   margin-top: var(--space-2)
+}
+.form .container {
+   max-width: 30rem;
+   background: var(--color-app-background);
+   border-radius: 0.5rem;
+   padding: var(--space-2);
+   display: none;
+}
+.form .container.show {
+   display: block;
+}
+.form .container .icon {
+   width: var(--icon-size);
+   margin: auto;
+}
+.form .container .icon img {
+   width: 100%;
+   filter: invert(1);
+}
+.inputGroup input {
+   width: 100%;
+   padding: var(--space-0_5);
+   border-radius: 0.25rem;
+   border: 2px solid #999;
+   background: none;
+   color: var(--text-color-white);
+}
+.inputGroup .label {
+   padding-bottom: var(--space-0_5);
+}
+.form .container button {
+   padding: var(--space-0_5) var(--space-2);
+   border-radius: 0.25rem;
+   background: rgba(129, 31, 31, 0.25);
+   border: 2px solid #c64343;
+   color: #fff;
+   cursor: pointer;
+   width: 100%;
+}
+.form .container button:hover {
+   filter:brightness(130%)
+}
+.inputGroup .inputError {
+   padding-top: var(--space-0_5);
+   display: none;
+   color: red;
+}
+.inputGroup.inputError .inputError {
+   display: block;
+}
+.incorrectLogin {
+   color: red;
+   padding-top: var(--space-0_5);
+   display: none;
+}
+.buttonGroup.wrong .incorrectLogin {
+   display: block;
+}
+/*-------------------------Web safety-------------------------*/
+.webSafety .top {
+   background: #222;
+   border-radius: 0.25rem;
+   padding: var(--space-1);
+}
+.webSafety .bottom .content p {
+   line-height: 1.25rem;
+   color: #fff;
+}
+.webSafety .bottom {
+   max-width: 40rem;
+   margin: 2rem auto;
+   background: #333;
+   padding: var(--space-2);
+   border-radius: 0.25rem;
+}
+.webSafety .bottom .list {
+   padding-left: var(--space-2)
+}
+
+/*-------------------------time calculator-------------------------*/
+
+      /* Style the form */
+      .timeCalculator{
+         border: 2px solid #fff;
+         border-radius: 0.5rem;
+         width: 30rem;
+         margin: 2rem auto;
+      }
+      
+      form {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      /* Style the input fields */
+      label {
+         margin-top: 0.5rem;
+         margin-bottom: 0.5rem;
+         font-size: 1.2rem;
+         font-weight: bolder;
+      }
+
+      input[type="number"] {
+         width: 20rem;
+         padding: 0.5rem;
+         border: 1px solid #ccc;
+         border-radius: 0.25rem;
+         text-align: center;
+      }
+
+      #month {
+         width: 20rem;
+         padding: 0.5rem;
+         border-radius: 0.25rem
+      }
+
+      /* Style the submit button */
+      .submit {
+         margin-top: 10px;
+         padding: 10px;
+         background-color: #4CAF50;
+         color: white;
+         border: none;
+         border-radius: 0.25rem;
+         cursor: pointer;
+         transition: all 0.3s ease-in-out;
+      }
+
+      .submit:hover {
+         background-color: #3e8e41;
+      }
+
+      /* Style the result section */
+      #result {
+         font-size: 1.2rem;
+         font-weight: bold;
+         margin-bottom: 2rem;
+      }
+
+      #result span {
+         display: inline-block;
+         width: 100%;
+      }
+
+
+
+
+
+

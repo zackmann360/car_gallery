@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <title>Time Elapsed Calculator</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="calculate.js" defer></script>
+</head>
+
+<body>
+
+   <div class="app">
+      <div class="bgImage"></div>
+      <div class="banner">
+         <div class="text">
+            <h1>IS THIS IT?</h1>
+         </div>
+      </div>
+      <div class="navbar">
+         <ul>
+            <a href="home_page.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Web Safety</a>
+            <a href="calculate.html">Time Used</a>
+
+         </ul>
+      </div>
+
+      <div class="timeCalculator">
+
+         <h1 class="center m-t-2">Time Elapsed Calculator</h1>
+
+         <form class="m-t-2" onsubmit="return calculateTimeElapsed()">
+            <label for="day">Day:</label>
+            <input type="number" id="day" name="day" min="1" max="31" required>
+            <br>
+
+            <label for="month">Month:</label>
+            <select id="month" name="month" required>
+               <option value="">-- Select a month --</option>
+               <option value="1">January</option>
+               <option value="2">February</option>
+               <option value="3">March</option>
+               <option value="4">April</option>
+               <option value="5">May</option>
+               <option value="6">June</option>
+               <option value="7">July</option>
+               <option value="8">August</option>
+               <option value="9">September</option>
+               <option value="10">October</option>
+               <option value="11">November</option>
+               <option value="12">December</option>
+            </select>
+            <br>
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" min="2000" max="2100" required>
+            <br>
+
+            <button class="submit" type="submit">Calculate</button>
+         </form>
+
+         <div class="center m-t-2" id="result">Results will show here!</div>
+      </div>
+
+   </div>
+</body>
+
+</html>
